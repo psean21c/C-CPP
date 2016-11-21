@@ -34,6 +34,19 @@ void update(int *a,int *b) {
 }
 ```
 
+```c
+    // Assign pointer variables
+    int a, b;
+    int *pa = &a, *pb = &b;
+
+// If you print out the memory address
+&a  = 22fe1c     &b = 22fe18
+&pa = 22fe10    &pb = 22fe08
+pa  = 22fe1c     pb = 22fe18
+*pa = 3         *pb = 4
+```
+
+
 ---
 ### Variable Sized Arrays
 
