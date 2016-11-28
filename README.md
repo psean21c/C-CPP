@@ -1,2 +1,2 @@
 # C-CPlusPlus
-Finally it's C that matters
+Finally it's C/C++ that matters
