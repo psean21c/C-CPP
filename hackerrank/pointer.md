@@ -9,7 +9,8 @@ https://www.hackerrank.com/challenges/c-tutorial-pointer
 #include <stdio.h>
 
 void update(int *a,int *b) {
-    // Complete this function    
+    // Complete this function below
+    ????
 }
 
 int main() {
@@ -117,6 +118,7 @@ int main() {
 
 https://www.hackerrank.com/challenges/virtual-functions
 
+Excellent question if you want to understand the concept of virtual function and get hands on experience
 
 ```c
 
@@ -239,8 +241,6 @@ public:
 
 	}
 };
-
-
 
 ```
 
