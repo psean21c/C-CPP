@@ -1,4 +1,23 @@
 
+###
+
+input
+```
+3
+string John Doe
+int 1 2
+float 4.0 1.5
+```
+
+output
+```
+JohnDoe
+3
+5.5
+```
+
+If you take a look at input/output, it is straightfoward to understand the requirement.
+You have to return the added value for input regardless of input data types.
 
 ```cpp
 
@@ -43,21 +62,7 @@ int main () {
 
 ```
 
-input
-```
-3
-string John Doe
-int 1 2
-float 4.0 1.5
-```
-
-output
-```
-JohnDoe
-3
-5.5
-```
-
+### Answer
 
 ```cpp
 template<class T>
