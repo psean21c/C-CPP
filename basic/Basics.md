@@ -89,6 +89,26 @@ int main() {
 
 ### class
 
+input
+```
+15
+john
+carmack
+10
+```
+
+output
+```
+15
+carmack, john
+10
+
+15,john,carmack,10
+```
+
+* Requirement
+Fill up the code to implement class - Student
+
 ```cpp
 
 #include <iostream>
@@ -163,9 +183,20 @@ public:
 		return standard;
 	}
 
+	// version 1
 	string to_string(){
 		return std::to_string(age) + "," + first_name + "," + last_name + "," + std::to_string(standard);
 	}
+
+	// version 2
+	string to_string(){
+		stringstream ss;
+		string result;
+		ss << age << "," << first_name << "," << last_name << "," << standard;
+		ss >> result;
+
+		return result;
+    	}
 };
 
 ```
