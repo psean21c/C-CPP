@@ -129,6 +129,14 @@ Excellent question if you want to understand the concept of virtual function and
 #include <algorithm>
 using namespace std;
 
+/***
+Implement two classes - Person + Professor
+
+class Person
+class Professor:public Person
+
+***/
+
 int main(){
 
     int n, val;
