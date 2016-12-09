@@ -43,6 +43,10 @@ sam=99912222
 Not found
 harry=12299933
 ```
+* Requirement
+
+Define map named phoneBook to save the data as below (key,value)
+
 
 phoneBook = {(sa,m 99912222),(tom, 11122222),(harry, 12299933)}
 
@@ -199,15 +203,4 @@ public:
     	}
 };
 
-```
-
-```
-string to_string(){
-        stringstream ss;
-        string result;
-        ss << age << "," << first_name << "," << last_name << "," << standard;
-        ss >> result;
-       
-        return result;
-    }
 ```
