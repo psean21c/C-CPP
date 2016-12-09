@@ -195,11 +195,10 @@ public:
 	// version 2
 	string to_string(){
 		stringstream ss;
-		string result;
-		ss << age << "," << first_name << "," << last_name << "," << standard;
-		ss >> result;
+		char c = ',';
+		ss << age << c << first_name << c << last_name << c << standard;
 
-		return result;
+		return ss.str();
     	}
 };
 
