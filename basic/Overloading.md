@@ -1,6 +1,9 @@
 
 [Original question](https://www.hackerrank.com/challenges/box-it)
 
+Need to understand the data type: 
+
+`long long` It's an integer, at least as big as long.
 
 ```cpp
 
