@@ -92,6 +92,8 @@ int main()
 
 ```
 
+TestCase-1
+
 input
 ```
 11
@@ -121,6 +123,28 @@ Greater
 Greater
 Lesser
 ```
+
+Testcase-2
+
+input
+```
+5
+2 3 4 5
+4
+5
+4
+2 4 6 7
+```
+
+output
+```
+3 4 5
+60
+3 4 5
+60
+4 6 7
+```
+
 
 Below is the one of solutions
 
