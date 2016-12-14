@@ -73,12 +73,31 @@ output
 
 Solution
 ```cpp
+	Node* insert(Node *head, int data) {
+		//Complete this method
+		Node *tmp;
+		if(head == NULL){
+			head = (Node *) malloc(sizeof(Node));
+			head->data = data;
+			head->next = NULL;
+		} else{
+			tmp = head;
+			while(tmp->next != NULL){
+				tmp = tmp->next;
+			}
+			tmp->next = (Node *) malloc(sizeof(Node));
+			tmp = tmp->next;
+			tmp->data = data;
+			tmp->next = NULL;
+		}
 
+		return head;
+	}
 ```
 
 
 ---
-
+Below is the another template for other operation (insert/delete/reverse/print)
 ```cpp
 #include <stdio.h>
 #include <stdlib.h>
