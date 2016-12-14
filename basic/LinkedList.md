@@ -111,6 +111,24 @@ Solution
 		return head;
 	}
 
+# Solution -3
+	Node* insert(Node *head, int data) {
+
+		Node* newNode = new Node(data);
+
+		if (head == NULL) {
+			head = new Node(data);
+		} else {
+			Node *curr = head;
+			while (curr->next != NULL){
+				curr = curr->next;
+			}
+			newNode->next = curr->next;
+			curr->next = newNode;
+		}
+
+		return head;
+	}
 
 ```
 
