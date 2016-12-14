@@ -23,6 +23,31 @@
        cin >> arr[i];
     }
 ```
+### Exception format
+
+ * Try-Catch flow
+
+```cpp
+#include <cstdio>
+#include <iostream>
+
+
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s;
+
+    try {
+        cout << stoi(s) << endl;
+    } catch(...) {
+        cout << "Bad String" << endl;
+    }
+
+    return 0;
+}
+
+```
 
 ### map
 
