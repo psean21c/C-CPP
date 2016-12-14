@@ -73,6 +73,8 @@ output
 
 Solution
 ```cpp
+
+# Solution -1
 	Node* insert(Node *head, int data) {
 		//Complete this method
 		Node *tmp;
@@ -93,6 +95,23 @@ Solution
 
 		return head;
 	}
+	
+# Solution 2
+	Node* insert(Node *head, int data) {
+		if (head == NULL) {
+			head = new Node(data);
+		} else {
+			Node *curr = head;
+			while (curr->next != NULL)
+				curr = curr->next;
+
+			curr->next = new Node(data);
+		}
+
+		return head;
+	}
+
+
 ```
 
 
