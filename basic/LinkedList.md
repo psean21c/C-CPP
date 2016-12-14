@@ -1,13 +1,15 @@
 
 #
 
+
 [LinkedList Basic PDF](http://cslibrary.stanford.edu/103/LinkedListBasics.pdf)
+
 [LinkedList Basic Coding](https://www.codeproject.com/Articles/24684/How-to-create-Linked-list-using-C-C)
 
 
 
 
-###
+### Template for the question
 
 ```cpp
 #include <iostream>
@@ -53,6 +55,20 @@ int main() {
 
 }
 
+```
+### Requirement
+
+input
+```
+4
+2
+3
+4
+1
+```
+output
+```
+2 3 4 1
 ```
 
 Solution
