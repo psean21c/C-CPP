@@ -40,7 +40,7 @@ ostream& operator<<(ostream& out, Box& B)
 ***/
 
 
-void check2()
+void check()
 {
 	int n;
 	cin>>n;
@@ -90,7 +90,7 @@ void check2()
 
 int main()
 {
-	check2();
+	check();
 }
 
 ```
