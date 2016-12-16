@@ -15,14 +15,38 @@
 ### vector
 
 ```cpp
+#include <iostream>
+#include <algorithm>
 #include <vector>
 
-    int n 
-    vector<int> arr(n);
-    for(int i = 0;i < n;i++){
-       cin >> arr[i];
-    }
+using namespace std;
+
+
+int main() {
+	int n = 0;
+	cin >> n;
+	vector<int> arr(n);
+
+	for(int i=0;i<n;i++){
+		cin >> arr[i];
+	}
+
+	sort(arr.begin(),arr.end());
+	for(unsigned int i=0;i<arr.size();i++){
+		cout << arr[i] << " ";
+	}
+
+}
 ```
+TestCase
+```
+6
+4 6 5 3 3 1
+
+>>
+1 3 3 4 5 6 
+```
+
 ### Exception format
 
  * Try-Catch flow
