@@ -11,4 +11,4 @@ I learned it from Chris Watkiss @Capilano College in 1997. I used to work on C/C
 
 It was the Hackrrank competition which I seriously start considering to switch my professional main language from Java/Python to C++ for  many reasons.
 
-![chriswatkiss1](https://cloud.githubusercontent.com/assets/5623445/21297420/a2cf5434-c54d-11e6-8eed-636bc16492f5.png)
+![chriswatkiss1](https://cloud.githubusercontent.com/assets/5623445/21297420/a2cf5434-c54d-11e6-8eed-636bc16492f5.png| width=100)
