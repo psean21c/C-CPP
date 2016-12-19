@@ -66,5 +66,7 @@ pa  = 22fe1c     pb = 22fe18
 *pa = 3         *pb = 4
 ```
 
+![pointer](https://cloud.githubusercontent.com/assets/5623445/21299110/71842710-c566-11e6-8760-36ffc1da7af5.PNG)
+
 
 ---
