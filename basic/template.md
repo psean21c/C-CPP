@@ -1,5 +1,9 @@
 
-###
+# Generic
+
+### C++ Class Templates
+
+[Original Question](https://www.hackerrank.com/challenges/c-class-templates)
 
 input
 ```
@@ -77,3 +81,59 @@ public:
 };
 
 ```
+---
+
+### Generics
+
+[Original Question](https://www.hackerrank.com/challenges/30-generics)
+
+oupput
+```
+1
+2
+3
+Hello
+World
+```
+Print element in the different line regardless of input types
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+// Implement generic function - named printArray
+
+
+int main() {
+
+    vector<int> vInt{1, 2, 3};
+    vector<string> vString{"Hello", "World"};
+
+    printArray<int>(vInt);
+    printArray<string>(vString);
+
+    return 0;
+}
+```
+
+solution
+```cpp
+
+// 1)
+template<typename T>
+void printArray(vector<T> a){
+	for(T i:a)cout<<i<<endl;
+}
+
+// 2)
+template <class T>
+void printArray(vector<T> v){
+    for(int i=0;i<v.size();i++)
+        cout<<v[i]<<endl;
+}
+```
+
+
+
