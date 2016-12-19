@@ -3,7 +3,24 @@
 
 ### Pointer
 
-https://www.hackerrank.com/challenges/c-tutorial-pointer
+[Original Question](https://www.hackerrank.com/challenges/c-tutorial-pointer)
+
+
+input
+```
+4
+5
+```
+output
+```
+9
+1
+```
+Explain
+```
+9=4+5
+1=|4-5|
+```
 
 ```c
 #include <stdio.h>
@@ -24,6 +41,8 @@ int main() {
     return 0;
 }
 ```
+
+Solution
 
 ```c++
 void update(int *a,int *b) {
