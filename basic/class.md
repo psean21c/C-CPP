@@ -1,4 +1,6 @@
-### class
+### 1) Class
+
+[Original Question](https://www.hackerrank.com/challenges/c-tutorial-class)
 
 input
 ```
@@ -112,10 +114,13 @@ public:
 
 ```
 
-### Inheritance methods
+### 2) Inheritance methods
 
 [Original Question](https://www.hackerrank.com/challenges/rectangle-area)
 
+Pay attention to 2 different ways to call display() method;
+   `r_area.Rectangle::display();` and  `r_area.display();`
+    
 ```cpp
 #include <iostream>
 
@@ -123,9 +128,7 @@ using namespace std;
 
 /***
 Implement two classes : Rectangle + RectangleArea
-Pay attention to 2 different ways to call display() method;
-    r_area.Rectangle::display();
-    r_area.display();
+
 ***/
 
 int main()
