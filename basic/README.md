@@ -68,6 +68,23 @@ TestCase
 1 3 3 4 5 6 
 ```
 
+ * Vector initialzed
+```cpp
+	vector<vector<int>> array2D;
+	array2D.resize(n);
+	for (int i = 0; i < n; ++i){
+		array2D[i].resize(n);
+	}
+```	
+
+### define
+
+```cpp
+#define FOR(i,n) for(int i = 0; i < (n); ++i)
+#define FOR1(i,n) for(int i = 1; i < (n); ++i)
+
+```
+
 ### Exception format
 
  * Try-Catch flow
