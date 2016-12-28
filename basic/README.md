@@ -6,9 +6,16 @@
 ```cpp
 #include <time.h>
 
+	// 1)
 	time_t t= clock();
   ...
 	cout<<(double)(clock()-t)/CLOCKS_PER_SEC<<endl;
+	
+	// 2)
+	clock_t start = clock();
+...
+	fprintf(stderr, "elapsed time #5 : %f\n", double(clock() - start) / CLOCKS_PER_SEC); start = clock();
+	
 ```
 
 
