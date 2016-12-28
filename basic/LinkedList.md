@@ -1,12 +1,18 @@
 
 #
 
+### Implement insert()
 
-[LinkedList Basic PDF](http://cslibrary.stanford.edu/103/LinkedListBasics.pdf)
+[15 Days LinkedList](https://www.hackerrank.com/challenges/30-linked-list)
 
-[LinkedList Basic Coding](https://www.codeproject.com/Articles/24684/How-to-create-Linked-list-using-C-C)
+### Implement getHeight()
+
+[22 Days BST-Question](https://www.hackerrank.com/challenges/30-binary-search-trees)
 
 
+### Implement levelOrder()
+
+[23 Days BST-Question](https://www.hackerrank.com/challenges/30-binary-trees)
 
 
 ### Template for the question
@@ -134,6 +140,16 @@ Solution
 
 
 ---
+### Reference
+
+[LinkedList Basic PDF](http://cslibrary.stanford.edu/103/LinkedListBasics.pdf)
+
+[LinkedList Basic Coding](https://www.codeproject.com/Articles/24684/How-to-create-Linked-list-using-C-C)
+
+
+
+---
+
 Below is the another template for other operation (insert/delete/reverse/print)
 ```cpp
 #include <stdio.h>
