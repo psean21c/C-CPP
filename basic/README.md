@@ -84,7 +84,7 @@ TestCase
 	}
 ```	
 
-### define
+### 3) Define
 
 ```cpp
 #define FOR(i,n) for(int i = 0; i < (n); ++i)
@@ -92,7 +92,7 @@ TestCase
 
 ```
 
-### Exception format
+### 4) Exception format
 
  * Try-Catch flow
 
@@ -118,7 +118,7 @@ int main() {
 
 ```
 
-### map
+### 5) Map
 
 input
 ```
@@ -185,207 +185,47 @@ int main() {
 
 
 ```
-### Variable Sized Arrays
 
-https://www.hackerrank.com/challenges/variable-sized-arrays
+### 6) Queue
 
+```cpp
+// My Solution
+	void levelOrder(Node * root){
+		if(root == NULL) return;
 
-```c
-#include <iostream>
-using namespace std;
+		queue<Node *> q;
+		q.push(root);
 
-int main() {
+		while(!q.empty()){
+			Node* tree = q.front();
+			q.pop();
 
-  int n, q;
-	cin >> n >> q;
-	int** ar = new int*[n];
-
-	for(int i=0;i<n;i++){
-		int k;
-		cin >> k;
-		ar[i] = new int[k];
-		for(int j=0;j<k;j++){
-			cin >> ar[i][j];
+			cout << tree->data << " ";
+			if(tree->left) q.push(tree->left);
+			if(tree->right) q.push(tree->right);
 		}
+
 	}
+// Others
 
-
-	for(int i=0;i<q;i++){
-		int x,y;
-		cin >> x >> y;
-		cout << ar[x][y] << endl;
-	}
-
-	return 0;
-}
-
-```
-
-
-```c
-
-  // 1) Cannot allocate array memory dynamically
-	int ar[n][n];
-	for(int i=0;i<n;i++){
-    ...
-		for(int j=0;j<k;j++){
-			cin >> ar[i][j];
-		}
-	}
-
-  // 2) pointer = array
-	int** ar = new int*[n];
-
-	for(int i=0;i<n;i++){
-		int k;
-		cin >> k;
-		ar[i] = new int[k];
-		for(int j=0;j<k;j++){
-			cin >> ar[i][j];
-		}
-	}
-
-
-
-```
-
----
-### Virtual function
-
-https://www.hackerrank.com/challenges/virtual-functions
-
-Excellent question if you want to understand the concept of virtual function and get hands on experience
-
-```c
-
-#include <cmath>
-#include <cstdio>
-#include <vector>
-#include <iostream>
-#include <algorithm>
-using namespace std;
-
-/***
-Implement two classes - Person + Professor
-
-class Person
-class Professor:public Person
-
-***/
-
-int main(){
-
-    int n, val;
-    cin>>n; //The number of objects that is going to be created.
-    Person *per[n];
-
-    for(int i = 0;i < n;i++){
-
-        cin>>val;
-        if(val == 1){
-            // If val is 1 current object is of type Professor
-            per[i] = new Professor;
-
+     void levelOrder(Node* root){
+  	
+       queue <Node*> q;
+       q.push(root);
+        // Don't use recursion on bfs
+          
+        while (!q.empty())
+        {
+            Node* current = q.front();
+            q.pop();
+            cout << current->data << " ";
+            
+            if (current->left != NULL)
+                q.push(current->left);
+            
+            if (current->right != NULL)
+                q.push(current->right);
         }
-        else per[i] = new Student; // Else the current object is of type Student
-
-        per[i]->getdata(); // Get the data from the user.
-
+	
     }
-
-    for(int i=0;i<n;i++)
-        per[i]->putdata(); // Print the required output for each object.
-
-    return 0;
-
-}
-
 ```
-
-
-```c
-int student_cnt;
-int prof_cnt;
-
-class Person{
-
-public:
-	string name;
-	int age;
-	Person(){}
-
-	Person(string n,int a){
-		this->name = n;
-		this->age = a;
-	}
-
-	virtual void getdata(){
-		cout << "Person getdata() :" <<endl;
-	}
-
-	virtual void putdata(){
-		cout << "Person putdata() :" <<endl;
-	}
-};
-
-class Professor:public Person{
-public:
-	int publications;
-	int cur_id;
-
-	Professor(){}
-
-	Professor(string n, int a, int p, int c):Person(n,a){
-		this->name = n;
-		this->age = a;
-		this->publications = p;
-		this->cur_id = c;
-	}
-	void getdata(){
-		//Walter 56 99
-		cin >> name >> age >> publications;
-		cur_id=++prof_cnt;
-
-	}
-
-	void putdata(){
-		//Walter 56 99 1
-		cout << name << " " << age << " " << publications << " " << cur_id << endl;
-	}
-};
-
-class Student:public Person{
-public:
-	int marks;
-	int cur_id;
-
-
-	Student(){}
-	Student(int c){
-		this->cur_id = c;
-	}
-
-	virtual void getdata(){
-	//Jesse 18 50 48 97 76 34 98
-	//Jesse 18 403 1
-		cin >> name >> age;
-		int sum = 0;
-		int a = 0;
-		for(int i=0;i<6;i++){
-			cin >> a;
-			sum += a;
-		}
-		marks = sum;
-		cur_id = ++student_cnt;
-
-	}
-
-	virtual void putdata(){
-		cout << name << " " << age << " " << marks << " " << cur_id << endl;
-
-	}
-};
-
-```
-
-
