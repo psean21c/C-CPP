@@ -54,7 +54,8 @@ int main() {
 		head = mylist.insert(head, data);
 	}
 	mylist.display(head);
-
+	head=mylist.removeDuplicates(head);
+	mylist.display(head);
 }
 
 ```
