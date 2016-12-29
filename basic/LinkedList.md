@@ -1,19 +1,12 @@
 
-#
+# Simple LinkedList
 
 ### Implement insert()
 
 [15 Days LinkedList](https://www.hackerrank.com/challenges/30-linked-list)
 
-### Implement getHeight()
-
-[22 Days BST-Question](https://www.hackerrank.com/challenges/30-binary-search-trees)
-
-
-### Implement levelOrder()
-
-[23 Days BST-Question](https://www.hackerrank.com/challenges/30-binary-trees)
-
+### Implement removeDuplicates()
+[24 Days More LinkedList](https://www.hackerrank.com/challenges/30-linked-list-deletion)
 
 ### Template for the question
 
@@ -38,7 +31,10 @@ public:
 	Node* insert(Node *head, int data) {
 		//Complete this method
 	}
-
+	Node* removeDuplicates(Node *head) {
+      		//Complete this method
+	}
+    
 	void display(Node *head) {
 		Node *start = head;
 		while (start) {
@@ -137,7 +133,102 @@ Solution
 	}
 
 ```
+# Binary Tree Search
 
+### Implement getHeight()
+
+[22 Days BST-Question](https://www.hackerrank.com/challenges/30-binary-search-trees)
+
+
+### Implement levelOrder()
+
+[23 Days BST-Question](https://www.hackerrank.com/challenges/30-binary-trees)
+
+### Template for the question
+
+```cpp
+#include <iostream>
+#include <cstddef>
+#include <queue>
+
+using namespace std;
+
+class Node {
+public:
+	int data;
+	Node *left;
+	Node *right;
+	Node(int d) {
+		data = d;
+		left = NULL;
+		right = NULL;
+	}
+};
+
+class Solution {
+public:
+	Node* insert(Node* root, int data) {
+		if (root == NULL) {
+			return new Node(data);
+		} else {
+			Node* cur;
+			if (data <= root->data) {
+				cur = insert(root->left, data);
+				root->left = cur;
+			} else {
+				cur = insert(root->right, data);
+				root->right = cur;
+			}
+
+			return root;
+		}
+	}
+	int getHeight(Node* root) {
+		//Write your code here
+		if(root == NULL) return 0;
+
+		int leftHeight = getHeight(root->left);
+		int rightHeight = getHeight(root->right);
+
+		return 1+ max(leftHeight,rightHeight);
+	}
+
+	void levelOrder(Node * root){
+		// Complete code here
+	}
+	
+	void display(Node *head) {
+        	Node *start=head;
+        	while(start) {
+                  cout<<start->data<<" ";
+                  start=start->next;
+              }
+	}
+
+};
+
+
+int main() {
+	Solution myTree;
+	Node* root = NULL;
+	int T;
+	int data;
+
+	cin >> T;
+
+	while (T-->0) {
+		cin >> data;
+		root = myTree.insert(root, data);
+	}
+	int height = myTree.getHeight(root);
+	cout << endl << "H=" << height << endl;
+
+	myTree.levelOrder(root);
+
+	return 0;
+}
+
+```
 
 
 ```cpp
