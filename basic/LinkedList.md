@@ -59,7 +59,7 @@ int main() {
 }
 
 ```
-### Requirement
+### Implement insert()
 
 input
 ```
@@ -134,6 +134,73 @@ Solution
 	}
 
 ```
+
+### Implement removeDuplicates()
+```cpp
+// My solution
+    Node* removeDuplicates(Node *head) {
+
+		Node *tmp = head;
+		int i = tmp->data;
+		Node *current = NULL;
+		current = insert(current,i);
+
+    	while(tmp->next!=NULL){
+    		tmp = tmp->next;
+    		int j = tmp->data;
+            if(i!=j) current = insert(current,j);
+            i = j;
+    	}
+
+    	return current;
+    }
+
+// Others
+ Node* removeDuplicates(Node *head)
+          {
+            Node *current = head;
+            //Write your code here
+            while (current->next != NULL) // iterate until there are no more elements 
+            {
+                
+                // If next is same as current, remove next
+                if (current->data == (current->next)->data)
+                {
+                    Node *temp = current->next;
+                    current->next = current->next->next;
+                    temp->next = NULL;
+                }
+                else
+                    current = current->next;
+                               
+            }
+            
+              
+            return head;
+          }
+	  
+// Other2
+          Node* removeDuplicates(Node *head)
+          {
+              Node* start = head;
+              while (start) {
+                  if (start->next!=NULL) {
+                      if (start->data == start->next->data) {
+                          start->next = start->next->next;
+                      } else {
+                          start = start->next;
+                      }
+                  } else {
+                      start = start->next;
+                  }
+              }
+              return head;
+          }
+
+```
+
+---
+
 # Binary Tree Search
 
 ### Implement getHeight()
