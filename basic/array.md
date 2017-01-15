@@ -63,3 +63,37 @@ int main() {
 ```
 
 ---
+
+### pass the 2D array as parameter to a function
+
+```cpp
+
+void printG(int **g,int SIZE){
+    for(int i=0;i<SIZE;i++){
+    	for(int j=0;j<SIZE;j++){
+		cout << g[i][j] << " ";
+    	}
+    	cout << endl;
+    }
+	cout << "---------------" << endl;
+}
+
+int main(){
+
+        int n = 5;
+        int SIZE = n;
+        int **graph;
+        graph = (int **) malloc(SIZE * sizeof(int*));
+
+        for(int i=0;i<SIZE;i++){
+    		graph[i] = (int *) malloc(SIZE * sizeof(int*));
+        	for(int j=0;j<SIZE;j++){
+        		graph[i][j] = 0;
+        	}
+        }
+
+        printG(graph, SIZE);
+	
+	return 0;
+}
+```
